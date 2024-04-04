@@ -1,0 +1,2256 @@
+                /* navbar style */
+                
+                * {
+                    margin: 0px;
+                    padding: 0px;
+                }
+                
+                header {
+                    background-color: #f7f7f7;
+                    position: fixed;
+                    width: 100%;
+                    top: 0px;
+                    left: 0px;
+                    z-index: 110;
+                    padding: 15px 30px;
+                }
+                
+                .header_right {
+                    padding: 0px 4px;
+                }
+                
+                #nav-icon {
+                    display: none;
+                    padding: 0px 200px;
+                }
+                
+                #navTrigger {
+                    display: none;
+                }
+                
+                .header_left img {
+                    width: 161px;
+                    height: 79px;
+                    margin-left: -225px;
+                }
+                
+                .container {
+                    display: flex;
+                    max-width: 1100px;
+                    width: 100%;
+                    margin: 0 auto;
+                    align-items: center;
+                    justify-content: space-between;
+                }
+                
+                .main_nav {
+                    margin-right: -174px;
+                }
+                
+                .main_nav ul {
+                    padding: 0px;
+                    margin: 0px;
+                    list-style: none;
+                }
+                
+                .main_nav ul li {
+                    float: left;
+                    margin: 9px 25px 0px 0px;
+                    position: relative;
+                    font-size: 12px;
+                    letter-spacing: 1px;
+                    font-weight: 300;
+                }
+                
+                .main_nav ul li a {
+                    color: black;
+                    text-decoration: none;
+                    list-style: none;
+                    line-height: 1.4;
+                    display: block;
+                    transition: all 0.3s ease-out;
+                }
+                
+                .main_nav ul li:hover>a {
+                    color: orange;
+                }
+                
+                .main_nav ul ul {
+                    position: absolute;
+                    left: 0px;
+                    top: (100% + 15px);
+                    white-space: nowrap;
+                    transition: all 0.3s ease-out;
+                    opacity: 0;
+                    pointer-events: none;
+                }
+                
+                .main_nav ul ul li {
+                    float: none;
+                    margin: 0px;
+                    border-bottom-color: 1px solid white;
+                }
+                
+                .main_nav>ul>li>ul:after {
+                    content: "";
+                    position: absolute;
+                    bottom: 100%;
+                    left: 0;
+                    height: 16px;
+                    width: 100%;
+                }
+                
+                .main_nav ul ul li a {
+                    color: white;
+                    background-color: black;
+                    padding: 10px;
+                    border: 1px solid white;
+                }
+                
+                .main_nav ul li:hover ul {
+                    opacity: 1;
+                    pointer-events: auto;
+                }
+                
+                .main_nav ul li:hover ul li:hover>a {
+                    background-color: rgb(255, 149, 0);
+                    color: black;
+                }
+                
+                .nav {
+                    height: 18px;
+                    width: 200%;
+                    background-color: red;
+                    display: flex;
+                    gap: 45px;
+                    color: white;
+                    font-size: 15px;
+                    position: fixed;
+                    margin: -18px 1px;
+                    position: fixed;
+                    z-index: 100;
+                }
+                
+                #RightToLeft {
+                    animation: RightToLeft 8s infinite linear;
+                }
+                
+                @keyframes RightToLeft {
+                    from {
+                        transform: translateX(0%);
+                    }
+                    to {
+                        transform: translateX(-50%);
+                    }
+                }
+                /*slider style*/
+                
+                .slider-containers {
+                    width: 100%;
+                    border: 1px solid black;
+                    position: relative;
+                    overflow: hidden;
+                    margin-top: 128px;
+                }
+                
+                #step1 {
+                    background-image: url('https://images.unsplash.com/photo-1679635520614-7448577b99c1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80');
+                    background-size: cover;
+                }
+                
+                #step2 {
+                    background-image: url('https://images.unsplash.com/photo-1533638446853-a05ab34984f9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80');
+                    background-size: cover;
+                }
+                
+                #step3 {
+                    background-image: url('https://images.unsplash.com/photo-1625580917212-e86139d26e1c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+                    background-size: cover;
+                }
+                
+                #step4 {
+                    background-image: url('https://images.unsplash.com/photo-1679635520614-7448577b99c1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80');
+                    background-size: cover;
+                    background-image: url('hdpic.jpg');
+                }
+                
+                .slider {
+                    display: flex;
+                    transition: transform 0.5s ease-in-out;
+                }
+                
+                .slide {
+                    flex: 0 0 100%;
+                    height: 550px;
+                    background-size: cover;
+                    background-position: center;
+                }
+                
+                .slide.active {
+                    transform: translateX(0);
+                }
+                
+                .slider-control {
+                    position: absolute;
+                    bottom: 20px;
+                    left: 50%;
+                }
+                
+                .next-slide {
+                    height: 31px;
+                    width: 32px;
+                    margin: 0 0px;
+                    border-radius: 150px;
+                    background-color: white;
+                    box-shadow: 1px 1px 1px black;
+                }
+                
+                .Prev-slide {
+                    height: 31px;
+                    width: 32px;
+                    margin: 0 0px;
+                    border-radius: 150px;
+                    background-color: black;
+                    box-shadow: 1px 1px 1px rgb(203, 194, 194);
+                }
+                /*card styleling*/
+                
+                .sec1 {
+                    align-items: center;
+                    justify-content: space-around;
+                    display: flex;
+                    height: 50%;
+                    width: 100%;
+                    margin-top: 25px;
+                }
+                
+                .sec1 .cards {
+                    text-align: center;
+                    justify-content: center;
+                    border: 2px solid black;
+                    background-color: rgb(155, 22, 66);
+                    height: 40vh;
+                    width: 25%;
+                    overflow: hidden;
+                    border-radius: 15px;
+                    background-position: center;
+                    background-size: cover;
+                }
+                
+                #card1 {
+                    background-image: url(https://tse3.mm.bing.net/th?id=OIP.PwOMHxRNnV_twh1KvT3EPgHaHa&pid=Api&P=0&h=180);
+                }
+                
+                #card2 {
+                    background-image: url(https://rajasthantraditional.com/wp-content/uploads/2020/01/IMG_20200125_140126-1024x768.jpg);
+                }
+                
+                #card3 {
+                    background-image: url(https://tse4.mm.bing.net/th?id=OIP.WfObJ3gA4J68MmqIhWRg6wHaFf&pid=Api&P=0&h=180);
+                }
+                
+                .cards h1 {
+                    font-size: 1.5rem;
+                    font-weight: 500;
+                    color: white;
+                }
+                
+                .cards P {
+                    font-size: 1rem;
+                    color: white;
+                }
+                
+                .contain-1 {
+                    opacity: 0;
+                    height: 100%;
+                    width: 100%;
+                    background-color: rgb(201, 55, 80);
+                    text-align: center;
+                    justify-content: center;
+                }
+                
+                .contain-1:hover {
+                    opacity: 1;
+                }
+                
+                .contain-2 {
+                    opacity: 0;
+                    height: 100%;
+                    width: 100%;
+                    background-color: rgb(137, 210, 11);
+                    text-align: center;
+                    justify-content: center;
+                }
+                
+                .contain-2:hover {
+                    opacity: 1;
+                }
+                
+                .contain-3 {
+                    opacity: 0;
+                    height: 100%;
+                    width: 100%;
+                    background-color: rgb(30, 7, 117);
+                    text-align: center;
+                    justify-content: center;
+                }
+                
+                .contain-3:hover {
+                    opacity: 1;
+                }
+                
+                .sec2 {
+                    margin: 5px;
+                    align-items: center;
+                    justify-content: space-around;
+                    display: flex;
+                    height: 50%;
+                    width: 100%;
+                }
+                
+                .sec2 .cards {
+                    text-align: center;
+                    justify-content: center;
+                    border: 2px solid black;
+                    background-color: rgb(155, 22, 66);
+                    height: 40vh;
+                    width: 25%;
+                    overflow: hidden;
+                    border-radius: 15px;
+                    background-position: center;
+                    background-size: cover;
+                }
+                
+                .cards h1 {
+                    font-size: 1.5rem;
+                    font-weight: 500;
+                    color: white;
+                }
+                
+                .cards P {
+                    font-size: 1rem;
+                    color: white;
+                }
+                
+                .contain-4 {
+                    opacity: 0;
+                    height: 100%;
+                    width: 100%;
+                    background-color: rgb(202, 12, 97);
+                    text-align: center;
+                    justify-content: center;
+                }
+                
+                .contain-4:hover {
+                    opacity: 1;
+                }
+                
+                #card4 {
+                    background-image: url(https://tse1.mm.bing.net/th?id=OIP.434zpISOb40RJ--ePvgsJgHaE8&pid=Api&P=0&h=180);
+                }
+                
+                .contain-5 {
+                    opacity: 0;
+                    height: 100%;
+                    width: 100%;
+                    background-color: rgb(202, 199, 12);
+                    text-align: center;
+                    justify-content: center;
+                }
+                
+                .contain-5:hover {
+                    opacity: 1;
+                }
+                
+                #card5 {
+                    background-image: url(https://static.bangkokpost.com/media/content/20171121/c1_1364039_171121041256.jpg);
+                }
+                
+                .contain-6 {
+                    opacity: 0;
+                    height: 100%;
+                    width: 100%;
+                    background-color: rgb(6, 79, 47);
+                    text-align: center;
+                    justify-content: center;
+                }
+                
+                .contain-6:hover {
+                    opacity: 1;
+                }
+                
+                #card6 {
+                    background-image: url(https://tse2.mm.bing.net/th?id=OIP.GCoPtZy8VtR0d9rhspmmqwHaE9&pid=Api&P=0&h=180);
+                }
+                
+                .section-3 {
+                    height: 50%;
+                    width: 99vw;
+                    background-color: rgb(9, 9, 9);
+                }
+                /* main items design*/
+                
+                .mainbox {
+                    height: 80vh;
+                    display: flex;
+                    opacity: 1;
+                    background-image: url(hd.pro.png);
+                    background-size: cover;
+                }
+                
+                .mainbox .card {
+                    background-color: rgb(234, 73, 9);
+                    height: 60vh;
+                    width: 25vw;
+                    margin-left: 15%;
+                    margin-top: 3%;
+                }
+                
+                #ca1 {
+                    background-image: url(https://i.pinimg.com/originals/b4/22/11/b42211c45c8828df5dca4b1ecc421d8b.jpg);
+                    background-size: cover;
+                    border-radius: 200px;
+                }
+                
+                #cat2 {
+                    box-shadow: 3px 3px 4px rgb(104, 100, 100);
+                }
+                
+                .card h2 {
+                    text-align: center;
+                    font-size: 2rem;
+                    font-weight: 400;
+                    color: white;
+                }
+                
+                .card p {
+                    text-align: center;
+                    color: white;
+                }
+                
+                .text {
+                    height: 15vh;
+                    width: 93%;
+                    margin-top: 5px;
+                    box-shadow: 2px 2px 5px rgb(13, 13, 13);
+                    background-color: rgb(219, 101, 11);
+                    align-items: center;
+                    justify-items: center;
+                    gap: 10px;
+                    margin-left: 4%;
+                }
+                
+                .text h3 {
+                    text-align: center;
+                    color: white;
+                    font-size: 2rem;
+                }
+                /*section design*/
+                
+                .text {
+                    height: 15vh;
+                    width: 93%;
+                    margin-top: 5px;
+                    box-shadow: 2px 2px 5px rgb(13, 13, 13);
+                    background-color: rgb(219, 101, 11);
+                    align-items: center;
+                    justify-items: center;
+                    gap: 10px;
+                    margin-left: 4%;
+                }
+                
+                .text h3 {
+                    text-align: center;
+                    color: white;
+                    font-size: 2rem;
+                }
+                
+                .pro-card {
+                    justify-content: space-around;
+                    height: 50%;
+                    width: 100%;
+                    display: flex;
+                }
+                
+                #card7 {
+                    background-image: url(https://images.pexels.com/photos/8111540/pexels-photo-8111540.jpeg?cs=srgb&dl=pexels-shootcase-chronicles-8111540.jpg&fm=jpg);
+                    margin-top: -19px;
+                    width: 23%;
+                    height: 437px;
+                    background-size: cover;
+                }
+                
+                #card8 {
+                    background-image: url(https://img.naidunia.com/naidunia/ndnimg/10092022/10_09_2022-56_bhog_2022910_193754.jpg);
+                    margin-top: -19px;
+                    width: 23%;
+                    height: 437px;
+                    background-size: cover;
+                }
+                
+                #card9 {
+                    background-image: url(https://i.ytimg.com/vi/k01C30vD-CE/maxresdefault.jpg);
+                    margin-top: -19px;
+                    width: 23%;
+                    height: 437px;
+                    background-size: cover;
+                }
+                
+                .pro1 {
+                    height: 40%;
+                    width: 30%;
+                    box-shadow: 4px 5px 5px rgb(20, 19, 19);
+                }
+                
+                .btn-end {
+                    display: flex;
+                    justify-content: space-around;
+                }
+                
+                .btn-end .endbtn {
+                    color: white;
+                    font-size: 1.5rem;
+                    background-color: rgb(232, 90, 2);
+                    height: 6vh;
+                    width: 27vw;
+                    margin-top: 2%;
+                    font-weight: 500;
+                }
+                /*Aarti timing*/
+                
+                .arti-timing {
+                    margin-top: 130px;
+                    height: 70vh;
+                    width: 100vw;
+                    justify-content: center;
+                }
+                
+                .arti-timing .time-head {
+                    margin: 47px 365px;
+                    text-align: center;
+                    font-size: 2rem;
+                    width: 50vw;
+                    color: white;
+                    background-color: rgb(232, 90, 2);
+                    text-shadow: 2px 3px 3px rgb(158, 157, 157);
+                    padding: 5px 5px;
+                    box-shadow: 2px 4px 4px rgb(154, 152, 152);
+                }
+                
+                .arti-timing table {
+                    margin: 8px 486px;
+                    font-size: 18px;
+                    padding: 17px 35px;
+                    width: 35vw;
+                    height: 60vh;
+                    border: 1px solid rgb(205, 200, 200);
+                }
+                
+                .arti-timing table td {
+                    margin: 1px 2px;
+                    text-align: center;
+                }
+                
+                .arti-timing table tr th {
+                    font-size: 1.6rem;
+                    color: orangered;
+                    text-align: center;
+                }
+                /*vedio style*/
+                
+                #ved {
+                    margin-left: 139px;
+                    margin-top: 60px;
+                }
+                
+                #ved:hover {
+                    filter: brightness(50%);
+                }
+                
+                .darsah {
+                    display: flex;
+                    margin-right: 111px;
+                }
+                
+                .darsah h2 {
+                    font-size: 55px;
+                    margin-top: 182px;
+                    margin-left: -483px;
+                }
+                
+                .block {
+                    height: 400px;
+                    width: 600px;
+                    background-size: cover;
+                    margin-left: 303px;
+                    cursor: pointer;
+                    filter: brightness(20%);
+                    margin-top: 60px;
+                    background-image: url(https://content3.jdmagicbox.com/comp/gwalior/j5/9999px751.x751.190822101616.r9j5/catalogue/sawariya-seth-photocopy-and-stationery-lashkar-gwalior-stationery-shops-qpjj6t0fwu.jpg?clr=);
+                }
+                
+                .block h1 {
+                    color: white;
+                    margin-top: 170px;
+                    margin-left: 200px;
+                }
+                
+                .block:hover {
+                    filter: brightness(100%);
+                }
+                /* footer style*/
+                
+                footer {
+                    margin-top: 4%;
+                    background-size: cover;
+                    height: 50vh;
+                    width: 100vw;
+                    text-align: center;
+                    color: white;
+                    justify-content: space-around;
+                    display: flex;
+                    background-image: url(hd.pro.png);
+                    background-size: cover;
+                }
+                
+                footer.footer1 {
+                    margin-top: 16%;
+                    height: 50vh;
+                    width: 100vw;
+                    color: white;
+                }
+                
+                .footer1 ul {
+                    font-size: 1.5rem;
+                    margin: 2%;
+                }
+                
+                .footer1 li {
+                    list-style: none;
+                    padding: 5px;
+                }
+                
+                footer.footer2 {
+                    margin-top: 16%;
+                    height: 50vh;
+                    width: 100vw;
+                    color: white;
+                }
+                
+                .footer2 ul {
+                    font-size: 1.5rem;
+                    margin: 3%;
+                    margin-top: 18px;
+                }
+                
+                .footer2 li {
+                    padding: 5px;
+                    list-style: none;
+                }
+                
+                footer.footer3 {
+                    margin-top: 40px;
+                    height: 50vh;
+                    width: 100vw;
+                    color: white;
+                }
+                
+                .footer3 ul {
+                    font-size: 1.5rem;
+                    margin: 3%;
+                    margin-top: 2%;
+                }
+                
+                .footer3 li {
+                    padding: 5px;
+                    list-style: none;
+                }
+                /*our service*/
+                /*live darshan*/
+                
+                .login-main-box {
+                    height: 2000px;
+                    width: 100%;
+                    background-color: #f4f4f4;
+                    margin-top: 35px;
+                }
+                
+                .login-form-box {
+                    height: 364px;
+                    border: 1px solid white;
+                    box-sizing: border-box;
+                    line-height: 1.8;
+                    width: 84%;
+                    margin-left: 75px;
+                    background-color: white;
+                    margin-top: -121%;
+                }
+                
+                .image-slider {
+                    box-sizing: border-box;
+                    line-height: 1.8;
+                    border: 1px solid white;
+                    width: 50%;
+                    height: 76%;
+                    background-image: url(https://media.istockphoto.com/id/518918017/photo/statue-of-seth-sanwariya-temple.jpg?s=1024x1024&w=is&k=20&c=9PnxxcTY5KzZYaAW3ND-xJSGWDjb-1yKdsvf4dikmjg=);
+                    background-size: cover;
+                    margin-top: 45px;
+                    margin-left: 20px;
+                    animation-name: slider_animation;
+                    animation-duration: 10s;
+                    animation-direction: alternate;
+                    animation-iteration-count: infinite;
+                    animation-play-state: running;
+                    animation-timing-function: linear;
+                }
+                
+                @keyframes slider_animation {
+                    0% {
+                        background-image: url(https://udaipurkiran.com/wp-content/uploads/2020/05/IMG-20200503-WA0027.jpg);
+                    }
+                    25% {
+                        background-image: url(https://1.bp.blogspot.com/-7MUVH53KR9A/X0jd38NWt7I/AAAAAAAAA6A/6XELUU56r8MlD1tzWbFPpnOShEp2OSrBACNcBGAsYHQ/w1200-h630-p-k-no-nu/Sanwariya-Seth-Picture.jpg);
+                    }
+                    50% {
+                        background-image: url(https://yt3.googleusercontent.com/HvTAKWu6WMBnunaWMtO_jn-QBAjefQpzCVUdOu2J-uloFPGxH0s0h8Ks6crBFT7SyMmoBOGWuZE=s900-c-k-c0x00ffffff-no-rj);
+                    }
+                }
+                
+                .form-box {
+                    margin-top: -272px;
+                    margin-left: 683px;
+                    box-sizing: border-box;
+                    line-height: 1.8;
+                    width: 32%;
+                    height: 86%;
+                    border: 1px solid silver;
+                }
+                
+                .login-here-box {
+                    box-sizing: border-box;
+                    border: 1px solid #e95612;
+                    height: 12%;
+                    width: 36%;
+                    line-height: 1.6;
+                    background-color: #e95612;
+                    margin-top: -23px;
+                    margin-left: 14px;
+                }
+                
+                .login-here-box h1 {
+                    color: white;
+                    font-size: 20px;
+                    font-weight: 200;
+                    align-items: center;
+                }
+                
+                .form-box2 h2 {
+                    color: red;
+                    margin-top: 37px;
+                    margin-left: 54px;
+                    font-size: 20px;
+                }
+                
+                .form-control {
+                    display: block;
+                    width: 89%;
+                    font-size: 1rem;
+                    line-height: 2.5;
+                    color: #495057;
+                    background-color: #fff;
+                    background-clip: padding-box;
+                    border: 1px solid #a26d54;
+                    border-radius: 0px;
+                    box-shadow: 2px 1px 4px #ae67474d;
+                    margin-top: 82px;
+                    align-items: center;
+                    padding: 0.375rem 0.75rem;
+                    margin-left: 5px;
+                }
+                
+                .e-heading h1 {
+                    color: black;
+                    font-size: 20px;
+                    margin-top: -85px;
+                    margin-left: 5px;
+                }
+                
+                .name-head h1 {
+                    color: black;
+                    font-size: 20px;
+                    margin-top: -84px;
+                    margin-left: 5px;
+                }
+                
+                .name-head h2 {
+                    color: red;
+                    margin-top: -37px;
+                    margin-left: 54px;
+                }
+                
+                .e-heading h2 {
+                    color: red;
+                    font-size: 20px;
+                    margin-top: -39px;
+                    margin-left: 57px;
+                }
+                
+                .name-head {
+                    color: red;
+                    font-size: 20px;
+                    margin-top: 9px;
+                    margin-left: 2px;
+                }
+                /*Mythology*/
+                
+                .intro {
+                    height: 128vh;
+                    width: 100vw;
+                    margin: 130px 1px;
+                }
+                
+                .intro-head {
+                    margin: 47px 365px;
+                    text-align: center;
+                    font-size: 2rem;
+                    width: 50vw;
+                    color: white;
+                    background-color: rgb(232, 90, 2);
+                    text-shadow: 2px 3px 3px rgb(158, 157, 157);
+                    padding: 5px 5px;
+                    box-shadow: 2px 4px 4px rgb(154, 152, 152);
+                }
+                
+                .intro .intro-part {
+                    margin: 1px 228px;
+                    height: 103vh;
+                    width: 70vw;
+                }
+                
+                .intro-part p {
+                    padding: 16px 34px;
+                    font-size: 21px;
+                }
+                /*daily program*/
+                
+                .dly-prgrm {
+                    height: 120vh;
+                    width: 100vw;
+                    margin: 131px 1px;
+                }
+                
+                .dly-prgrm .div1 {
+                    align-items: center;
+                    justify-content: space-around;
+                    height: 50vh;
+                    width: 100vw;
+                    display: flex;
+                }
+                
+                .div1 .pc {
+                    text-align: center;
+                    justify-content: center;
+                    box-shadow: 2px 4px 4px gray;
+                    background-color: rgb(155, 22, 66);
+                    height: 40vh;
+                    width: 25%;
+                    overflow: hidden;
+                    border-radius: 12px;
+                    background-position: center;
+                    background-size: cover;
+                }
+                
+                #pcd1 {
+                    background-image: url(mangala-aarati.webp);
+                }
+                
+                #pcd2 {
+                    background-image: url(rajbhoj.webp);
+                }
+                
+                #pcd3 {
+                    background-image: url(rest2.jpeg);
+                }
+                
+                .pc h1 {
+                    line-height: 1.6;
+                    padding-top: 70px;
+                    font-size: 1.6rem;
+                    font-weight: 700;
+                    color: white;
+                }
+                
+                .pc P {
+                    padding-top: 3px;
+                    font-size: 1.7rem;
+                    color: white;
+                }
+                
+                .prgrm1 {
+                    opacity: 0;
+                    height: 100%;
+                    width: 100%;
+                    background-color: rgb(201, 55, 80);
+                    text-align: center;
+                    justify-content: center;
+                }
+                
+                .prgrm1:hover {
+                    opacity: 1;
+                }
+                
+                .prgrm2 {
+                    opacity: 0;
+                    height: 100%;
+                    width: 100%;
+                    background-color: rgb(137, 210, 11);
+                    text-align: center;
+                    justify-content: center;
+                }
+                
+                .prgrm2:hover {
+                    opacity: 1;
+                }
+                
+                .prgrm3 {
+                    opacity: 0;
+                    height: 100%;
+                    width: 100%;
+                    background-color: rgb(30, 7, 117);
+                    text-align: center;
+                    justify-content: center;
+                }
+                
+                .prgrm3:hover {
+                    opacity: 1;
+                }
+                
+                .dly-prgrm .div1 {
+                    align-items: center;
+                    justify-content: space-around;
+                    height: 50vh;
+                    width: 100vw;
+                    display: flex;
+                }
+                
+                .div1 .pc {
+                    text-align: center;
+                    justify-content: center;
+                    box-shadow: 2px 4px 4px gray;
+                    background-color: rgb(155, 22, 66);
+                    height: 40vh;
+                    width: 25%;
+                    overflow: hidden;
+                    border-radius: 12px;
+                    background-position: center;
+                    background-size: cover;
+                }
+                
+                #pcd1 {
+                    background-image: url(https://shrisanwariyaseth.org/static/images/mangala-aarati.webp);
+                }
+                
+                #pcd2 {
+                    background-image: url(https://shrisanwariyaseth.org/static/images/rajbhoj.webp);
+                }
+                
+                #pcd3 {
+                    background-image: url(https://shrisanwariyaseth.org/static/images/rest-time.webp);
+                }
+                
+                .pc h1 {
+                    line-height: 1.6;
+                    padding-top: 70px;
+                    font-size: 1.6rem;
+                    font-weight: 700;
+                    color: white;
+                }
+                
+                .pc P {
+                    padding-top: 3px;
+                    font-size: 1.7rem;
+                    color: white;
+                }
+                
+                .prgrm1 {
+                    opacity: 0;
+                    height: 100%;
+                    width: 100%;
+                    background-color: rgb(201, 55, 80);
+                    text-align: center;
+                    justify-content: center;
+                }
+                
+                .prgrm1:hover {
+                    opacity: 1;
+                }
+                
+                .prgrm2 {
+                    opacity: 0;
+                    height: 100%;
+                    width: 100%;
+                    background-color: rgb(137, 210, 11);
+                    text-align: center;
+                    justify-content: center;
+                }
+                
+                .prgrm2:hover {
+                    opacity: 1;
+                }
+                
+                .prgrm3 {
+                    opacity: 0;
+                    height: 100%;
+                    width: 100%;
+                    background-color: rgb(30, 7, 117);
+                    text-align: center;
+                    justify-content: center;
+                }
+                
+                .prgrm3:hover {
+                    opacity: 1;
+                }
+                
+                .dly-prgrm .div2 {
+                    align-items: center;
+                    justify-content: space-around;
+                    height: 50vh;
+                    width: 100vw;
+                    display: flex;
+                }
+                
+                .div2 .pc {
+                    text-align: center;
+                    justify-content: center;
+                    box-shadow: 2px 4px 4px gray;
+                    background-color: rgb(155, 22, 66);
+                    height: 40vh;
+                    width: 25%;
+                    overflow: hidden;
+                    border-radius: 12px;
+                    background-position: center;
+                    background-size: cover;
+                }
+                
+                #pcd4 {
+                    background-image: url(https://shrisanwariyaseth.org/static/images/darshan.webp);
+                }
+                
+                #pcd5 {
+                    background-image: url(https://shrisanwariyaseth.org/static/images/evening-aarti.webp);
+                }
+                
+                #pcd6 {
+                    background-image: url(https://shrisanwariyaseth.org/static/images/newproject_1.webp);
+                }
+                
+                .prgrm4 {
+                    opacity: 0;
+                    height: 100%;
+                    width: 100%;
+                    background-color: rgb(201, 55, 80);
+                    text-align: center;
+                    justify-content: center;
+                }
+                
+                .prgrm4:hover {
+                    opacity: 1;
+                }
+                
+                .prgrm5 {
+                    opacity: 0;
+                    height: 100%;
+                    width: 100%;
+                    background-color: rgb(137, 210, 11);
+                    text-align: center;
+                    justify-content: center;
+                }
+                
+                .prgrm5:hover {
+                    opacity: 1;
+                }
+                
+                .prgrm6 {
+                    opacity: 0;
+                    height: 100%;
+                    width: 100%;
+                    background-color: rgb(30, 7, 117);
+                    text-align: center;
+                    justify-content: center;
+                }
+                
+                .prgrm6:hover {
+                    opacity: 1;
+                }
+                
+                .dly-prgrm .div3 {
+                    align-items: center;
+                    justify-content: space-around;
+                    height: 50vh;
+                    width: 100vw;
+                    display: flex;
+                }
+                
+                .div3 .pc {
+                    text-align: center;
+                    justify-content: center;
+                    box-shadow: 2px 4px 4px gray;
+                    background-color: rgb(155, 22, 66);
+                    height: 40vh;
+                    width: 25%;
+                    overflow: hidden;
+                    border-radius: 12px;
+                    background-position: center;
+                    background-size: cover;
+                }
+                
+                #pcd7 {
+                    background-image: url(https://shrisanwariyaseth.org/static/images/newproject.webp);
+                }
+                
+                .prgrm7 {
+                    opacity: 0;
+                    height: 100%;
+                    width: 100%;
+                    background-color: rgb(40, 191, 228);
+                    text-align: center;
+                    justify-content: center;
+                }
+                
+                .prgrm7:hover {
+                    opacity: 1;
+                }
+                /*reach as*/
+                
+                .intro-head1 {
+                    margin: 130px 34px;
+                    text-align: center;
+                    font-size: 2rem;
+                    width: 50vw;
+                    color: white;
+                    background-color: rgb(232, 90, 2);
+                    text-shadow: 2px 3px 3px rgb(158, 157, 157);
+                    padding: 5px 5px;
+                    box-shadow: 2px 4px 4px rgb(154, 152, 152);
+                }
+                
+                .locate {
+                    width: 50%;
+                    height: 50%;
+                    margin: -149px 36px;
+                }
+                
+                iframe {
+                    width: 100%;
+                    margin: 50px 1px;
+                }
+                
+                .mapped {
+                    display: flex;
+                }
+                
+                .mapped-right {
+                    height: 50%;
+                    width: 41%;
+                    background-color: #495057;
+                }
+                
+                .mapped-right-box {
+                    background-image: url(hd.pro.png);
+                    border: 2px solid black;
+                    height: 438px;
+                    margin-top: -97px;
+                    background-size: cover;
+                }
+                
+                .mapped-right-box h1 {
+                    color: white;
+                    font-size: xxx-large;
+                    margin-top: 56px;
+                    margin-left: 77px;
+                }
+                
+                .mapped-right-box h3 {
+                    color: white;
+                    font-size: larger;
+                    margin-top: 28px;
+                    margin-left: 33px;
+                }
+                /*Donation page*/
+                
+                .donation-box {
+                    height: 100%;
+                    width: 100%;
+                    background-color: gainsboro;
+                    margin-top: 90px;
+                }
+                
+                .donation-account-box {
+                    height: 74%;
+                    width: 100%;
+                    background-color: red;
+                    margin-top: 126px;
+                    color: white;
+                    text-align: center;
+                }
+                
+                .donation-form {
+                    display: grid;
+                    grid: 100px / auto auto;
+                    grid-gap: 20px;
+                    margin: 20px 55px;
+                }
+                
+                .donation-form-group {
+                    height: 40px;
+                    width: 450px;
+                }
+                
+                .donation-form-group option {
+                    color: grey;
+                }
+                
+                .donation-heading h1 {
+                    color: rgb(39, 32, 32);
+                    font-size: 20px;
+                }
+                
+                .donation-log-in {
+                    margin-top: 53px;
+                    margin-left: 302px;
+                    box-sizing: border-box;
+                    border: 1px solid green;
+                    line-height: 1.8;
+                    border-radius: 33px;
+                    background-color: green;
+                    padding: 9px 20px;
+                    width: 25%;
+                }
+                
+                .donation-btn-1 {
+                    box-sizing: border-box;
+                    border: 1px solid green;
+                    line-height: 1.8;
+                    border-radius: 33px;
+                    background-color: green;
+                    margin-top: -68px;
+                    margin-left: 115px;
+                    padding: 9px 20px;
+                    width: 6%;
+                }
+                
+                .donation-log-in a {
+                    color: white;
+                    text-decoration: none;
+                }
+                
+                .donation-btn-1 a {
+                    color: white;
+                    text-decoration: none;
+                }
+                
+                .btn-1 a {
+                    color: white;
+                    font-size: 1rem;
+                    list-style: none;
+                    text-decoration: none;
+                    align-items: center;
+                    margin-left: 10px;
+                    margin-top: 120px;
+                }
+                /* devotee page*/
+                
+                .banner img {
+                    height: 50%;
+                    width: 100%;
+                    position: absolute;
+                }
+                
+                .devotee-box {
+                    height: 70%;
+                    width: 60%;
+                    border: 2px solid black;
+                    background-color: aliceblue;
+                    position: relative;
+                    margin-top: 163px;
+                    margin-left: 301px;
+                }
+                
+                .devotee-form-group {
+                    height: 40px;
+                    width: 350px;
+                    background-color: white;
+                }
+                
+                .donation-account-box {
+                    height: 74%;
+                    width: 100%;
+                    background-color: red;
+                    margin-top: -1px;
+                    color: white;
+                    text-align: center;
+                }
+                
+                .devotee-log-in {
+                    margin-top: -50px;
+                    margin-left: 122px;
+                    box-sizing: border-box;
+                    border: 1px solid green;
+                    line-height: 1.8;
+                    border-radius: 33px;
+                    background-color: green;
+                    padding: 9px 20px;
+                    width: 25%;
+                }
+                
+                .devotee-log-in a {
+                    color: white;
+                    text-decoration: none;
+                }
+                /*help deak*/
+                
+                .helpdesk-box {
+                    height: 70%;
+                    width: 60%;
+                    background-color: aliceblue;
+                    position: relative;
+                    margin-top: 280px;
+                    margin-left: 301px;
+                    padding: 0;
+                    border-bottom: 1px solid #f1f1f1;
+                    padding-bottom: 30px;
+                    margin-bottom: 23px;
+                }
+                
+                .help-desk-title {
+                    font-size: 24px;
+                }
+                
+                .help-desk-title span {
+                    padding: 7px;
+                    width: 45px;
+                    height: 45px;
+                    text-align: center;
+                    line-height: 36px;
+                    color: #fff;
+                    background: #e73801;
+                    display: inline-block;
+                    font-size: 30px;
+                    margin-right: 30px;
+                    position: relative;
+                }
+                
+                .help_deskpara {
+                    list-style-type: none;
+                    padding: 0;
+                    margin-left: 144px;
+                    font-size: 14px;
+                    line-height: 33px;
+                    font-weight: 500;
+                    margin-top: -48px;
+                }
+                
+                .helpdesk-form {
+                    display: grid;
+                    grid: 100px / auto auto;
+                    grid-gap: 20px;
+                    margin: 20px 55px;
+                }
+                /*sugam darshan view page*/
+                
+                .view-heading {
+                    width: 64%;
+                    border: 1px solid black;
+                    padding: 0px;
+                    margin: 14px;
+                    justify-content: flex-end;
+                    display: flex;
+                    align-items: center;
+                    flex-direction: column;
+                    margin-left: 252px;
+                }
+                
+                .view-conditions {
+                    width: 64%;
+                    border: 1px solid black;
+                    margin: 14px;
+                    text-align: justify;
+                    justify-content: center;
+                    margin-left: 252px;
+                }
+                
+                .view-conditions ol {
+                    padding: 30px;
+                }
+                
+                .view-conditions h1 {
+                    color: black;
+                    justify-items: unset;
+                    width: 100%;
+                    font-size: xx-large;
+                    border: 1px solid black;
+                    background-color: rgb(251, 229, 232);
+                }
+                
+                .view-heading p {
+                    padding: 42px 24px;
+                }
+                
+                .view-heading span {
+                    float: right;
+                    color: black;
+                }
+                
+                .view-heading h1 {
+                    color: black;
+                    width: 100%;
+                    font-size: xx-large;
+                    border: 1px solid black;
+                    background-color: rgb(251, 229, 232);
+                }
+                
+                .view-btn a {
+                    background-color: green;
+                    border: 1px solid green;
+                    padding: 16px 29px;
+                    text-decoration: none;
+                    color: white;
+                    border-radius: 26px;
+                    float: right;
+                    margin-right: 303px;
+                }
+                /*festival image*/
+                
+                .banner-fas img {
+                    height: 100%;
+                    width: 100%;
+                }
+                
+                .fes-heading {
+                    background-color: red;
+                    text-align: center;
+                    width: 100%;
+                    height: 30%;
+                    color: white;
+                    margin-bottom: 30px;
+                }
+                
+                .fastival-container {
+                    height: 100%;
+                    width: 100%;
+                }
+                
+                .fastival-row {
+                    display: flex;
+                    height: 40%;
+                    gap: 84px;
+                    margin-right: 42px;
+                    margin-left: 43px;
+                    margin-bottom: 54px;
+                }
+                /*registration form*/
+                
+                .nav1 {
+                    height: 18px;
+                    width: 200%;
+                    background-color: red;
+                    display: flex;
+                    gap: 45px;
+                    color: white;
+                    font-size: 15px;
+                    position: fixed;
+                    margin: 77px 1px;
+                    position: fixed;
+                    z-index: 100;
+                }
+                
+                #RightTo {
+                    animation: RightToLeft 8s infinite linear;
+                }
+                
+                @keyframes RightToLeft {
+                    from {
+                        transform: translateX(0%);
+                    }
+                    to {
+                        transform: translateX(-50%);
+                    }
+                }
+                
+                .registration-main-box {
+                    height: 1000px;
+                    width: 100%;
+                    background-color: #f4f4f4;
+                }
+                
+                .registration-form-box {
+                    height: 798px;
+                    border: 1px solid white;
+                    box-sizing: border-box;
+                    line-height: 1.8;
+                    width: 84%;
+                    margin-left: 75px;
+                    background-color: white;
+                    margin-top: -55%;
+                }
+                
+                .reg-image-slider {
+                    box-sizing: border-box;
+                    line-height: 1.8;
+                    border: 1px solid white;
+                    width: 50%;
+                    height: 70%;
+                    background-image: url(https://media.istockphoto.com/id/518918017/photo/statue-of-seth-sanwariya-temple.jpg?s=1024x1024&w=is&k=20&c=9PnxxcTY5KzZYaAW3ND-xJSGWDjb-1yKdsvf4dikmjg=);
+                    background-size: cover;
+                    margin-top: 45px;
+                    margin-left: 20px;
+                    animation-name: slider_animation;
+                    animation-duration: 10s;
+                    animation-direction: alternate;
+                    animation-iteration-count: infinite;
+                    animation-play-state: running;
+                    animation-timing-function: linear;
+                }
+                
+                @keyframes slider_animation {
+                    0% {
+                        background-image: url(https://udaipurkiran.com/wp-content/uploads/2020/05/IMG-20200503-WA0027.jpg);
+                    }
+                    25% {
+                        background-image: url(https://1.bp.blogspot.com/-7MUVH53KR9A/X0jd38NWt7I/AAAAAAAAA6A/6XELUU56r8MlD1tzWbFPpnOShEp2OSrBACNcBGAsYHQ/w1200-h630-p-k-no-nu/Sanwariya-Seth-Picture.jpg);
+                    }
+                    50% {
+                        background-image: url(https://yt3.googleusercontent.com/HvTAKWu6WMBnunaWMtO_jn-QBAjefQpzCVUdOu2J-uloFPGxH0s0h8Ks6crBFT7SyMmoBOGWuZE=s900-c-k-c0x00ffffff-no-rj);
+                    }
+                }
+                
+                .reg-form-box {
+                    margin-top: -566px;
+                    margin-left: 683px;
+                    box-sizing: border-box;
+                    line-height: 1.8;
+                    width: 32%;
+                    height: 80%;
+                    border: 1px solid silver;
+                }
+                
+                .Register-account-box {
+                    box-sizing: border-box;
+                    border: 1px solid #e95612;
+                    height: 5%;
+                    width: 39%;
+                    line-height: 1.6;
+                    background-color: #e95612;
+                    margin-top: -23px;
+                    margin-left: 14px;
+                }
+                
+                .Register-account-box h1 {
+                    color: white;
+                    font-size: 20px;
+                    font-weight: 200;
+                    align-items: center;
+                }
+                
+                .reg-form-box h2 {
+                    color: red;
+                    margin-top: 2px;
+                    margin-left: 193px;
+                    font-size: 20px;
+                }
+                
+                .form-group {
+                    display: block;
+                    width: 89%;
+                    font-size: 1rem;
+                    line-height: 2.5;
+                    color: #495057;
+                    background-color: #fff;
+                    background-clip: padding-box;
+                    border: 1px solid #a26d54;
+                    border-radius: 0px;
+                    box-shadow: 2px 1px 4px #ae67474d;
+                    margin-top: 85px;
+                    align-items: center;
+                    padding: 0.375rem 0.75rem;
+                    margin-left: 5px;
+                }
+                
+                .name-heading h1 {
+                    color: black;
+                    font-size: 20px;
+                    margin-top: -85px;
+                    margin-left: 5px;
+                }
+                
+                .last-name h1 {
+                    color: black;
+                    font-size: 20px;
+                    margin-top: -84px;
+                    margin-left: 5px;
+                }
+                
+                .name-heading h2 {
+                    color: red;
+                    font-size: 20px;
+                    margin-top: -39px;
+                    margin-left: 101px;
+                }
+                
+                .last-name h2 {
+                    color: red;
+                    font-size: 20px;
+                    margin-top: -38px;
+                    margin-left: 98px;
+                }
+                
+                .mobile h1 {
+                    color: black;
+                    font-size: 20px;
+                    margin-top: -85px;
+                    margin-left: 5px;
+                }
+                
+                .mobile h2 {
+                    color: red;
+                    font-size: 20px;
+                    margin-top: -38px;
+                    margin-left: 67px;
+                }
+                
+                .email-heading h1 {
+                    color: black;
+                    font-size: 20px;
+                    margin-top: -85px;
+                    margin-left: 5px;
+                }
+                
+                .password-set {
+                    margin-top: 85px;
+                }
+                
+                .password-set h1 {
+                    color: black;
+                    font-size: 20px;
+                    margin-top: -84px;
+                    margin-left: 5px;
+                }
+                
+                .email-heading h2 {
+                    color: red;
+                    font-size: 20px;
+                    margin-top: -39px;
+                    margin-left: 57px;
+                }
+                
+                .password-set h2 {
+                    color: red;
+                    font-size: 20px;
+                    margin-top: -38px;
+                    margin-left: 86px;
+                }
+                
+                .confirm-password h1 {
+                    color: black;
+                    font-size: 20px;
+                    margin-top: -84px;
+                    margin-left: 5px;
+                }
+                
+                .confirm-password h2 {
+                    color: red;
+                    font-size: 20px;
+                    margin-top: -39px;
+                    margin-left: 166px;
+                }
+                
+                .log-in {
+                    margin-top: 53px;
+                    margin-left: 302px;
+                }
+                
+                .btn-1 {
+                    box-sizing: border-box;
+                    border: 1px solid green;
+                    line-height: 1.8;
+                    border-radius: 10px;
+                    background-color: green;
+                    height: 6%;
+                    width: 20%;
+                    margin-top: -26px;
+                    margin-left: 115px;
+                }
+                
+                .btn-1 a {
+                    color: white;
+                    font-size: 1rem;
+                    list-style: none;
+                    text-decoration: none;
+                    align-items: center;
+                    margin-left: 10px;
+                    margin-top: 120px;
+                }
+                /*log in form*/
+                
+                .login-main-box {
+                    height: 2000px;
+                    width: 100%;
+                    background-color: #f4f4f4;
+                    margin-top: 35px;
+                }
+                
+                .login-form-box {
+                    height: 364px;
+                    border: 1px solid white;
+                    box-sizing: border-box;
+                    line-height: 1.8;
+                    width: 84%;
+                    margin-left: 75px;
+                    background-color: white;
+                    margin-top: -121%;
+                }
+                
+                .image-slider {
+                    box-sizing: border-box;
+                    line-height: 1.8;
+                    border: 1px solid white;
+                    width: 50%;
+                    height: 76%;
+                    background-image: url(https://media.istockphoto.com/id/518918017/photo/statue-of-seth-sanwariya-temple.jpg?s=1024x1024&w=is&k=20&c=9PnxxcTY5KzZYaAW3ND-xJSGWDjb-1yKdsvf4dikmjg=);
+                    background-size: cover;
+                    margin-top: 45px;
+                    margin-left: 20px;
+                    animation-name: slider_animation;
+                    animation-duration: 10s;
+                    animation-direction: alternate;
+                    animation-iteration-count: infinite;
+                    animation-play-state: running;
+                    animation-timing-function: linear;
+                }
+                
+                @keyframes slider_animation {
+                    0% {
+                        background-image: url(https://udaipurkiran.com/wp-content/uploads/2020/05/IMG-20200503-WA0027.jpg);
+                    }
+                    25% {
+                        background-image: url(https://1.bp.blogspot.com/-7MUVH53KR9A/X0jd38NWt7I/AAAAAAAAA6A/6XELUU56r8MlD1tzWbFPpnOShEp2OSrBACNcBGAsYHQ/w1200-h630-p-k-no-nu/Sanwariya-Seth-Picture.jpg);
+                    }
+                    50% {
+                        background-image: url(https://yt3.googleusercontent.com/HvTAKWu6WMBnunaWMtO_jn-QBAjefQpzCVUdOu2J-uloFPGxH0s0h8Ks6crBFT7SyMmoBOGWuZE=s900-c-k-c0x00ffffff-no-rj);
+                    }
+                }
+                
+                .form-box {
+                    margin-top: -272px;
+                    margin-left: 683px;
+                    box-sizing: border-box;
+                    line-height: 1.8;
+                    width: 32%;
+                    height: 76%;
+                    border: 1px solid silver;
+                }
+                
+                .login-here-box {
+                    box-sizing: border-box;
+                    border: 1px solid #e95612;
+                    height: 12%;
+                    width: 36%;
+                    line-height: 1.6;
+                    background-color: #e95612;
+                    margin-top: -23px;
+                    margin-left: 14px;
+                }
+                
+                .login-here-box h1 {
+                    color: white;
+                    font-size: 20px;
+                    font-weight: 200;
+                    align-items: center;
+                }
+                
+                .form-box h2 {
+                    color: red;
+                    margin-top: 2px;
+                    margin-left: 193px;
+                    font-size: 20px;
+                }
+                
+                .form-control {
+                    display: block;
+                    width: 89%;
+                    font-size: 1rem;
+                    line-height: 2.5;
+                    color: #495057;
+                    background-color: #fff;
+                    background-clip: padding-box;
+                    border: 1px solid #a26d54;
+                    border-radius: 0px;
+                    box-shadow: 2px 1px 4px #ae67474d;
+                    margin-top: 30px;
+                    align-items: center;
+                    padding: 0.375rem 0.75rem;
+                    margin-left: 5px;
+                }
+                
+                .e-heading h1 {
+                    color: black;
+                    font-size: 20px;
+                    margin-top: -85px;
+                    margin-left: 5px;
+                }
+                
+                .password {
+                    margin-top: 85px;
+                }
+                
+                .password h1 {
+                    color: black;
+                    font-size: 20px;
+                    margin-top: -84px;
+                    margin-left: 5px;
+                }
+                
+                .e-heading h2 {
+                    color: red;
+                    font-size: 20px;
+                    margin-top: -39px;
+                    margin-left: 57px;
+                }
+                
+                .password h2 {
+                    color: red;
+                    font-size: 20px;
+                    margin-top: -38px;
+                    margin-left: 86px;
+                }
+                
+                .reg {
+                    margin-top: 53px;
+                    margin-left: 9px;
+                }
+                
+                .forgot-pwd {
+                    margin-top: -27px;
+                    margin-left: 217px;
+                }
+                
+                .welcome {
+                    width: 100%;
+                    height: 20px;
+                    background-color: #a26d54;
+                    margin-top: -448px;
+                }
+                
+                .welcome h1 {
+                    font-size: 17px;
+                    color: black;
+                }
+                
+                .end {
+                    height: 1280px;
+                    width: 100%;
+                    background-size: cover;
+                    background-image: url(sanwariya\ seth\ temple\ edited2.jpg);
+                    margin-top: 575px;
+                    display: flex;
+                    color: white;
+                    gap: 70px;
+                    margin-bottom: 5px;
+                }
+                
+                .end-part {
+                    margin-left: -99px;
+                    margin-top: 126px;
+                }
+                
+                .end-part ul {
+                    font-size: 47px;
+                    margin-left: 130px;
+                    margin-top: 250px;
+                    cursor: pointer;
+                }
+                
+                .end-part li {
+                    font-size: 25px;
+                    margin-left: 146px;
+                    margin-top: 40px;
+                    cursor: pointer;
+                }
+                
+                .btn {
+                    box-sizing: border-box;
+                    border: 1px solid green;
+                    line-height: 1.8;
+                    border-radius: 10px;
+                    background-color: green;
+                    height: 10%;
+                    width: 20%;
+                    margin-top: 0px;
+                    margin-left: 11px;
+                }
+                
+                .btn a {
+                    color: white;
+                    font-size: 1rem;
+                    list-style: none;
+                    text-decoration: none;
+                    align-items: center;
+                    margin-left: 10px;
+                    margin-top: 120px;
+                }
+                /*Help desk*/
+                
+                .help-desk-main {
+                    height: 1000px;
+                    width: 100%;
+                    background-color: #f4f4f4;
+                }
+                
+                .help-desk-main-heading h1 {
+                    margin-left: 617px;
+                    margin-top: -896px;
+                    font-size: 3rem;
+                    font-weight: 1000;
+                }
+                
+                .form-control-1 {
+                    display: block;
+                    width: 41%;
+                    font-size: 1rem;
+                    line-height: 2.5;
+                    color: #495057;
+                    background-color: #fff;
+                    background-clip: padding-box;
+                    border: 1px solid #a26d54;
+                    border-radius: 8px;
+                    box-shadow: 2px 1px 4px #ae67474d;
+                    margin-top: 85px;
+                    align-items: center;
+                    padding: 0.375rem 0.75rem;
+                    margin-left: 69px;
+                }
+                
+                .form-control-2 {
+                    display: block;
+                    width: 41%;
+                    font-size: 1rem;
+                    line-height: 2.5;
+                    color: #495057;
+                    background-color: #fff;
+                    background-clip: padding-box;
+                    border: 1px solid #a26d54;
+                    border-radius: 8px;
+                    box-shadow: 2px 1px 4px #ae67474d;
+                    margin-top: -71px;
+                    align-items: center;
+                    padding: 0.375rem 0.75rem;
+                    margin-left: 765px;
+                }
+                
+                .form-control-3 {
+                    display: block;
+                    width: 87%;
+                    font-size: 1rem;
+                    line-height: 2.5;
+                    color: #495057;
+                    background-color: #fff;
+                    background-clip: padding-box;
+                    border: 1px solid #a26d54;
+                    border-radius: 8px;
+                    box-shadow: 2px 1px 4px #ae67474d;
+                    margin-top: 40px;
+                    align-items: center;
+                    padding: 0.375rem 0.75rem;
+                    margin-left: 68px;
+                }
+                
+                textarea {
+                    margin-top: 34px;
+                    margin-left: 70px;
+                    height: 180px;
+                    width: 89%;
+                    border: 1px solid #a26d54;
+                    border-radius: 8px;
+                    font-size: x-large;
+                }
+                
+                #con-btn {
+                    background-color: green;
+                    color: #f4f4f4;
+                    font-size: 1.5rem;
+                    height: 45px;
+                    width: 116px;
+                    border-radius: 21px;
+                    margin: 14px 697px;
+                }
+                
+                label#inblured {
+                    float: right;
+                    font-size: 24px;
+                    margin-top: -47px;
+                }
+                /* resonsive css*/
+                
+                @media screen and (max-width:480px) {
+                    .header_left img {
+                        margin-left: 0px;
+                        width: 100px;
+                    }
+                    .main_nav img {
+                        width: 45px;
+                        margin: 0px 49px;
+                    }
+                    #nav-icon {
+                        display: block;
+                        position: relative;
+                        font-size: 30px;
+                        color: black;
+                        margin-right: 49px;
+                    }
+                    .main_nav {
+                        left: 0px;
+                        top: 114px;
+                        padding: 0px;
+                        position: fixed;
+                        background-color: black;
+                        z-index: 100;
+                        height: calc(100%-70px);
+                        width: 294px;
+                        transition: all 0.3s ease-out;
+                        transform: translateX(-150%);
+                        cursor: pointer;
+                        overflow: scroll;
+                    }
+                    .main_nav ul li {
+                        float: none;
+                        margin: 0 !important;
+                        border-bottom: 1px solid white;
+                        color: white;
+                        text-align: center;
+                    }
+                    .main_nav ul li a {
+                        padding: 10px;
+                        color: white;
+                    }
+                    .main_nav>ul>li:hover>a {
+                        background-color: rgba(255, 183, 0, 0.96);
+                        color: #fff;
+                    }
+                    .main_nav ul ul {
+                        position: static;
+                        pointer-events: auto;
+                        opacity: 1;
+                        overflow: scroll;
+                        overflow-x: scroll;
+                        height: 0;
+                    }
+                    .main_nav ul .sub {
+                        height: auto;
+                    }
+                    .main_nav ul ul li a {
+                        padding-left: 30px;
+                    }
+                    .main_nav ul ul ul li a {
+                        padding-left: 60px;
+                    }
+                    .main_nav ul ul ul ul li a {
+                        padding-left: 90px;
+                    }
+                    .main_nav ul li :hover>ul {
+                        height: auto;
+                    }
+                    #navTrigger {
+                        opacity: 0;
+                        position: fixed;
+                        width: 0px;
+                        height: 0px;
+                        margin: 0;
+                    }
+                    #navTrigger:checked+.main_nav {
+                        transform: translateX(0%);
+                    }
+                    .header_right {
+                        padding: 0px 65px;
+                    }
+                    /*nav design*/
+                    .nav {
+                        font-size: 9px;
+                    }
+                    .next-slide {
+                        height: 24px;
+                        width: 24px;
+                    }
+                    .Prev-slide {
+                        height: 24px;
+                        width: 24px;
+                    }
+                    /*main container design*/
+                    .mainbox .card {
+                        width: 41vw;
+                    }
+                    #ca1 {
+                        border-radius: 162px;
+                        height: 128px;
+                        width: 116px
+                    }
+                    .card h2 {
+                        font-size: 1rem;
+                        font-weight: bold;
+                    }
+                    .card p {
+                        text-align: center;
+                        color: white;
+                        font-size: 10px;
+                    }
+                    .text {
+                        height: 15vh;
+                        width: 93%;
+                        margin-top: 5px;
+                        box-shadow: 2px 2px 5px rgb(13, 13, 13);
+                        background-color: rgb(219, 101, 11);
+                        align-items: center;
+                        justify-items: center;
+                        gap: 10px;
+                        margin-left: 4%;
+                    }
+                    .text h3 {
+                        text-align: center;
+                        color: white;
+                        font-size: 2rem;
+                    }
+                    #card7 {
+                        margin-top: -11px;
+                        height: 173px;
+                    }
+                    #card8 {
+                        margin-top: -11px;
+                        height: 173px;
+                    }
+                    #card9 {
+                        margin-top: -11px;
+                        height: 173px;
+                    }
+                    .btn-end .endbtn {
+                        font-size: 1rem;
+                        height: 20vh;
+                        width: 107px;
+                    }
+                    /*Aarti timing*/
+                    .arti-timing .time-head {
+                        margin: 44px 100px;
+                        text-align: center;
+                        font-size: 1rem;
+                        width: 63vw;
+                    }
+                    .arti-timing table {
+                        margin: 0px 88px;
+                        padding: 0px 7px;
+                        width: 72vw;
+                        height: 60vh;
+                    }
+                    /*vedio*/
+                    #ved {
+                        width: 405px;
+                        margin-left: 20px;
+                    }
+                    .darsah {
+                        display: block;
+                    }
+                    .darsah h2 {
+                        font-size: 55px;
+                        margin-top: 182px;
+                        margin-left: -483px;
+                    }
+                    .block {
+                        height: 279px;
+                        width: 405px;
+                        background-size: cover;
+                        cursor: pointer;
+                        filter: brightness(20%);
+                        margin: -391px 20px;
+                    }
+                    .block h1 {
+                        color: white;
+                        margin-top: 170px;
+                        margin: 164px 122px;
+                    }
+                    /* footer style*/
+                    footer {
+                        margin-top: 403px;
+                        background-size: cover;
+                        height: auto;
+                        width: 100vw;
+                        text-align: center;
+                        justify-content: space-around;
+                        display: block;
+                    }
+                    /*help desk*/
+                    .help-desk-main {
+                        height: 0;
+                        width: 100%;
+                        background-color: #f4f4f4;
+                    }
+                    .help-desk-main-heading h1 {
+                        margin-left: 150px;
+                        margin-top: 130px;
+                        font-size: 2rem;
+                        font-weight: bold;
+                    }
+                    .form-control-1 {
+                        width: 64%;
+                        font-size: 10px;
+                        margin-top: 20px;
+                        margin-left: 36px;
+                    }
+                    .form-control-2 {
+                        width: 64%;
+                        font-size: 10px;
+                        margin-top: 6px;
+                        margin-left: 36px;
+                    }
+                    .form-control-3 {
+                        width: 64%;
+                        font-size: 10px;
+                        margin-top: 31px;
+                        margin-left: 36px;
+                    }
+                    textarea {
+                        margin-top: 29px;
+                        margin-left: 36px;
+                        height: 122px;
+                        width: 86%;
+                        font-size: medium;
+                    }
+                    #con-btn {
+                        margin: 18px 159px;
+                    }
+                    /*mythology*/
+                    .intro {
+                        height: 128vh;
+                        width: 100vw;
+                        margin: 130px 1px;
+                    }
+                    .intro-head {
+                        margin: 1px 128px;
+                        width: 45vw;
+                        padding: 2px 0px;
+                    }
+                    .intro .intro-part {
+                        margin: 11px 67px;
+                        height: 103vh;
+                        width: 80vw;
+                    }
+                    .intro-part p {
+                        padding: 16px 34px;
+                        font-size: 13px;
+                    }
+                    /*daily program*/
+                    .pc h1 {
+                        padding-top: 25px;
+                        font-size: 12px;
+                        font-weight: bold;
+                    }
+                    .pc P {
+                        font-size: 12px;
+                    }
+                }

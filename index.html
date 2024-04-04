@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAWARIYA SETH</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="header_left">
+                <img src="data:image/png;base64,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"></a>
+            </div>
+            <div class="header_right">
+                <label for="navTrigger">  <i class="fa-solid fa-bars"  id="nav-icon"></i></label>
+                <input type="checkbox" id="navTrigger">
+                <nav class="main_nav">
+                    <ul>
+
+                        <li>
+                            <img src="https://shrikashivishwanath.org/frontend/images/pray.png" height="40px" width="40px" /><br>
+                            <a href="index.html" onclick="this.nextElementSibling.classList.toggle('sub');">Home</a>
+
+                        </li>
+                        <li>
+                            <img src="https://shrikashivishwanath.org/frontend/images/monitor.png" height="40px" width="40px" /><br>
+                            <a href="#" onclick="this.nextElementSibling.classList.toggle('sub');">Online Services</a>
+                            <ul>
+                                <li> <a href="https://www.tripadvisor.in/Hotel_Review-g12413292-d15866550-Reviews-Shri_Sanwaliya_Dham-Chittorgarh_District_Rajasthan.html">Shri Sanwaliya Dham Ac Guest House</a></li>
+                                <li> <a href="https://www.goibibo.com/hotels/rooms-of-chitrakoot-resort-hotel-in-chittorgarh-7349421761999629679/">Chitrakoot Resort and Restaurant</a></li>
+                                <li> <a href="service.html">Sugam Darshan Booking</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <img src="https://shrikashivishwanath.org/frontend/images/contact1.png" height="40px" width="40px" /><br>
+                            <a href="#" onclick="this.nextElementSibling.classList.toggle('sub');">Contact us</a>
+                            <ul>
+
+                                <li> <a href="contactus.html">Contact Us</a></li>
+                                <li> <a href="reach.html">How to reach</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <img src="https://shrikashivishwanath.org/frontend/images/file.png" height="40px" width="40px" /><br><a href="#">Tender</a></li>
+                        <li>
+                            <img src="https://shrikashivishwanath.org/frontend/images/user.png" height="40px" width="40px" /><br>
+
+                            <a href="#" onclick="this.nextElementSibling.classList.toggle('sub');">other</a>
+                            <ul>
+                                <li> <a href="mythology.html">Methology</a></li>
+                                <li><a href="helpdesk.html">help desk</a></li>
+                                <li> <a href="dailyprogram.html">Daily Program</a></li>
+                                <li> <a href="Aarti.html">Aarti Time</a></li>
+                                <li><a href="festival.html">festival</li>
+                                    <li><a href="helpdesk.html">help desk</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <img src="https://shrikashivishwanath.org/frontend/images/file.png" height="40px" width="40px" /><br>
+                            <a href="donation.html">Domination</a></li>
+                                <li>
+                                    <img src="https://shrikashivishwanath.org/frontend/images/donation.png" height="40px" width="40px" /><br>
+                                    <a href="devotree.html">devotee support</a></li>
+                                <li>
+                                    <img src="https://shrikashivishwanath.org/frontend/images/customer_support.png" height="40px" width="40px" /><br>
+                                    <a href="Adminitration.html">Administration Login</a></li>
+                                <li>
+                                    <img src="https://shrikashivishwanath.org/frontend/images/user.png" height="40px" width="40px" /><br>
+                                    <a href="#" onclick="this.nextElementSibling.classList.toggle('sub');">Login</a>
+                                    <ul>
+                                        <li> <a href="login.html">Login </a></li>
+                                        <li> <a href="registration.html">Registration</a></li>
+                                        <li> <a href="contactus.html">Contact us</a></li>
+
+                                    </ul>
+                                </li>
+                            </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <div class="nav" id="RightToLeft">
+
+        <div>Helpline no +91 6393 131 608 |</div>
+        <div>For Any query Call: 7080292930 |</div>
+        <div>Whatsapp number: +91 6393 131 608 | </div>
+        <div> For Protocol Only: protocol@shreesawariyaseth.org |</div>
+        <a href="index.html">English|</a>
+        <a href="index.html">Hindi</a>
+
+    </div>
+
+    <div class="slider-containers">
+        <div class="slider">
+            <div class="slide active" id="step4"></div>
+            <div class="slide" id="step3"></div>
+            <div class="slide" id="step2"></div>
+            <div class="slide" id="step1"></div>
+        </div>
+        <div class="slider-control">
+            <button class="Prev-slide" id="Prev-slide"></button>
+            <button class="next-slide"></button>
+
+        </div>
+    </div>
+    <!--cards-->
+    <section class="sec1">
+        <div class="cards" id="card1">
+            <div class="contain-1">
+                <h1> Darshan</h1>
+                <p> Sanwariya Seth Temple is Chittorgarh Railway Station. This temple door opens at 5:30 AM Morning till 23:00 PM Night.The Sanwariya Seth Temple Aarti Timings includes Mangala Aarti, Evening Aarti & Falahar Prasad.</p>
+            </div>
+        </div>
+
+        <div class="cards" id="card2">
+            <div class="contain-2">
+                <h1>Festival</h1>
+                <p>, Maha-Shivaratri, Holi, Phooldol Festival, Navratri, Ram-Navami, Jaljhulni Ekadashi, Deepawali and Annakoot festivals are celebrated</p>
+            </div>
+        </div>
+
+        <div class="cards" id="card3">
+            <div class="contain-3">
+                <h1> Shri Sawariya Prashadam</h1>
+                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum sapiente ut, ipsum itaque minus incidunt placeat quas. Nisi ipsa ducimus, rerum repudiandae non tempora atque ullam explicabo totam eius placeat?</p>
+            </div>
+        </div>
+
+
+    </section>
+    <section class="sec2">
+        <div class="cards" id="card4">
+            <div class="contain-4">
+                <h1>Online Hotel Booking </h1>
+                <p>A versatile space designed to accommodate various events and activities. It offers a flexible environment customized to suit different needs, such as conferences, exhibitions, group rudra-abhishek, group seminars, sangoshthi, concerts,
+                    and community gatherings, birthday and wedding anniversary celebrations, etc.....</p>
+            </div>
+        </div>
+
+        <div class="cards" id="card5">
+            <div class="contain-5">
+                <h1>Online Donation</h1>
+                <p>
+                    Online platform for devotees living all around the globe to make their contribution and offerings in the service of Baba Vishwanath. All donations made by Indian Citizens is exempted u/s 80G. </p>
+            </div>
+        </div>
+
+        <div class="cards" id="card6">
+            <div class="contain-6">
+                <h1>Sawariya Multipurpose Hall Booking</h1>
+                <p>A versatile space designed to accommodate various events and activities. It offers a flexible environment customized to suit different needs, such as conferences, exhibitions, group rudra-abhishek, group seminars, sangoshthi, concerts,
+                    and community gatherings, birthday and wedding anniversary celebrations, etc..... </p>
+            </div>
+        </div>
+
+
+    </section>
+    <div class="mainbox">
+        <div class="card" id="ca1"></div>
+        <div class="card" id="ca2">
+            <div class="overlap">
+                <h2>About Temple</h2>
+                <hr>
+                <p>Shri Sawariya Seth Temple is one of the most popular temple located in the district of Chittorgarh in the Indian state of Rajasthan . The temple is dedicate to Lord Krishna.Shree Sanwariya Seth Dham is a large temple in Rajasthan. It is
+                    in the village of Mandafia, about 40 km from the district headquarters of Chittorgarh. This temple is on the road between Chittorgarh and Udaipur.The Seth Sawaliya Ji is open daily from 5:00 am to 12:00 pm and from 2:30 pm to 11:00
+                    pm. During this time, you can visit the mandir anytime.</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="text">
+        <h3>Our Programs</h3>
+    </div>
+
+    <div class="pro-card">
+        <div class="pro1" id="card7">
+            <div>
+
+            </div>
+        </div>
+
+        <div class="pro1" id="card8">
+            <div>
+
+            </div>
+        </div>
+
+        <div class="pro1" id="card9">
+            <div>
+
+            </div>
+        </div>
+
+
+    </div>
+    <div class="btn-end">
+        <button class="endbtn">Sugam Darshan</button>
+        <button class="endbtn">Aarti Booking</button>
+        <button class="endbtn">Shri SawariyaSeth Prashadam</button>
+    </div>
+    <!--arti Darshan timing-->
+    <div class="arti-timing">
+        <h2 class="time-head">Shri Sanwaliya Ji Temple Aarti Timing
+        </h2>
+        <table>
+            <tr>
+                <th>Aarti</th>
+                <th>Time</th>
+            </tr>
+            <tr>
+                <td>Morning Mangala Aarti</td>
+                <td>5.30 AM</td>
+            </tr>
+            <tr>
+                <td>Rajbhog Aarti</td>
+                <td>10.00 AM</td>
+            </tr>
+            <tr>
+                <td> Shringar Aarti </td>
+                <td>7.00 PM</td>
+            </tr>
+            <tr>
+                <td>Evening Aarti</td>
+                <td>7.15 PM</td>
+            </tr>
+            <tr>
+                <td>Night Shayan Aarti</td>
+                <td> 10.00 PM</td>
+            </tr>
+        </table>
+    </div>
+
+
+    <div class="darsah">
+        <iframe width="650" height="400" id="ved" src="https://www.youtube.com/embed/81a4hB9jGrE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <h2>Live Darshan</h2>
+        <div class="block">
+            <h1>Located Us </h1>
+
+        </div>
+    </div>
+    <!--footer-->
+    <footer>
+        <div class="footer1">
+            <ul> Online Service</ul>
+            <li> How to donate</li>
+            <li>Sugam Darshan</li>
+            <li>Prashad</li>
+
+
+            <li>Guest House Booking</li>
+        </div>
+        <div class="footer2">
+            <ul>Privacy & Policy</ul>
+            <li> Refund and Cancellation</li>
+            <li>FAQ</li>
+        </div>
+        <div class="footer3">
+            <ul>Contact Details</ul>
+            <li>Shree Sawariya Seth</li>
+            <li>P99H=63V, village mandafiya,<br> Bhadsora,Rajasthan-312024
+            </li>
+            <li> Mandir Phone No.-7942693548</li>
+        </div>
+
+    </footer>
+
+    <script>
+        const slider = document.querySelector(".slider");
+        const slides = document.querySelectorAll(".slide");
+        const prevbtn = document.getElementById('Prev-slide');
+        const nextbtn = document.querySelector(".next-slide");
+        console.log(prevbtn);
+
+        let slideIndex = 0;
+        slides[slideIndex].classList.add('active');
+        prevbtn.addEventListener('click', prevSlide);
+        nextbtn.addEventListener('click', nextSlide);
+
+
+
+        function prevSlide() {
+            slides[slideIndex].classList.remove('active');
+            slideIndex = (slideIndex === 0) ? slide.length - 1 : slideIndex - 1;
+            slider.style.transform = `translateX(-${slideIndex*100}%)`;
+        }
+
+        function nextSlide() {
+            slides[slideIndex].classList.remove('active');
+            slideIndex = (slideIndex === slides.length - 1) ? 0 : slideIndex + 1;
+            slider.style.transform = `translateX(-${slideIndex*100}%)`;
+        }
+    </script>
+</body>
+
+</html>
